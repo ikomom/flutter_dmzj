@@ -1,8 +1,10 @@
 buildscript {
-    ext.kotlin_version = '1.6.10'
+    ext.kotlin_version = '1.8.20'
     repositories {
-        google()
+        google { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
         mavenCentral()
+        jcenter { url 'https://maven.aliyun.com/repository/public' }
     }
 
     dependencies {
@@ -13,8 +15,10 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
+        google { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/public' }
         mavenCentral()
+        jcenter { url 'https://maven.aliyun.com/repository/public' }
     }
 }
 
@@ -26,6 +30,6 @@ subprojects {
     project.evaluationDependsOn(':app')
 }
 
-task clean(type: Delete) {
+tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }

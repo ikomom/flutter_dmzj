@@ -86,8 +86,8 @@ class NovelRecommendView extends StatelessWidget {
   Widget buildShowMore({required Function() onTap}) {
     return GestureDetector(
       onTap: onTap,
-      child: Row(
-        children: const [
+      child: const Row(
+        children: [
           Text(
             "查看更多",
             style: TextStyle(fontSize: 14, color: Colors.grey),
@@ -101,8 +101,8 @@ class NovelRecommendView extends StatelessWidget {
   Widget buildRefresh({required Function() onRefresh}) {
     return GestureDetector(
       onTap: onRefresh,
-      child: Row(
-        children: const [
+      child: const Row(
+        children: [
           Icon(Remix.refresh_line, size: 18, color: Colors.grey),
           AppStyle.hGap4,
           Text(
