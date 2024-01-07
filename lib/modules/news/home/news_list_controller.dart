@@ -19,7 +19,7 @@ class NewsListController extends BasePageController<NewsListInfoProto> {
     if (tag.tagId == 0 && page == 1) {
       loadBanner();
     }
-    return await request.getNewsList(tag.tagId, page);
+    return await request.getNewsList(tag.tagId, page + 1);
   }
 
   void loadBanner() async {
